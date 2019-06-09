@@ -11,7 +11,8 @@ class Anagram
     #seems overly complicated but only way to sort a string simply is to split it first
     arr.select { |i| sorted_word == i.split("").sort.join("") } 
     
-    arr.select { |i| anagram?(word, i) } 
+    #this is a one liner but requires helper method
+    # arr.select { |i| anagram?(word, i) } 
   end
   
   def anagram?(word1, word2)
