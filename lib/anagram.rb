@@ -12,6 +12,16 @@ class Anagram
     arr.select { |i| sorted_word == i.split("").sort.join("") } 
   end
   
+  def anagram?(word1, word2)
+    count1 = Hash.new(0)
+    count2 = Hash.new(0)
+    
+    word1.chars.each { |char| count1[char] += 1 }
+    word2.chars.each { |char| count2[char] += 1 }
+    
+    count1 == count2
+  end
+  
   
   
   
